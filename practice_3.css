@@ -1,0 +1,198 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+:root {
+  font-size: 62,5%;
+  --deafut-border: 0.1rem solid rgba (0, 0, 0, 0.15);
+}
+
+body, button, input, select, textarea{
+  font-family: 'heebo', sans-serif;
+}
+
+header {
+  background-color: #f7f7f7;
+  height: 80px;
+}
+
+body {
+  background-color: #fff;
+}
+
+header #navbar {
+  display: flex;
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+header #navbar .nav_brand {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700px;
+  color: darkgreen;
+}
+
+header #navbar .nav_list {
+  display: flex;
+  align-items: center;
+  gap: 31px;
+  list-style: none; 
+}
+
+header #navbar .nav_list .nav_item a {
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+header #navbar .nav_list .nav_item a:hover{    
+  font-weight: 400;
+}
+
+/* SECTION BANNER */
+
+main{
+  margin-top: 6rem;
+}
+
+main #banner{
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+main #banner .banner_content .banner_content_title{
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 60px;
+  margin-bottom: 40px;
+}
+
+main #banner .banner_content .banner_content_subtitle{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  max-width: 500px;
+  text-align: justify;
+}
+
+main #banner .banner_content .banner_content_btn{
+  background-color: #00abcc;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 4px;
+  padding: 8px 24px;
+  border: none;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+main #banner .banner_img{
+  border-radius: 50%;
+  max-width: 300px;
+}
+
+/* SE A TELA TEM ATÉ 870 PIXELS, SERÁ APLICADA ESSA CONFIGURAÇÃO */
+@media (max-width: 890px) {
+  main #banner {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 2rem;
+  }
+  main #banner .banner_content {
+    text-align: center;
+  }
+
+  main #banner .banner_content .banner_content_btn {
+    margin-top: 1rem;
+  }
+
+}
+
+
+/* SECTION POSTS */
+
+section#posts {
+  background-color: aquamarine;
+  margin-top: 71px;
+}
+
+section#posts {
+  display: flex;
+  /* justify-content: space-between; */
+  
+}
+
+section#posts .posts_content{
+  max-width: 1200px;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+section#posts .posts_content .posts_content_header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+section#posts .posts_content .posts_content_header .section_title{
+  font-size: 22px;
+  font-weight: 500;
+}
+
+section#posts .posts_content .posts_content_header .view_all{
+  text-decoration: none;
+  color: #00a8cc;
+}
+
+section#posts .posts_content .posts_cards{
+  display: flex;
+  gap: 40px;
+  margin-bottom: 2rem;
+}   
+
+section#posts .posts_content .card{
+  background-color: #fff;
+  padding: 24px;
+}
+
+section#posts .posts_content .posts_cards .card h3{
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 37px;
+}
+
+section#posts .posts_content .posts_cards .card span{
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  /* "display:block" used because "span" is inline, then we need change it initial config */
+  display: block;
+}
+
+section#posts .posts_content .posts_cards .card p{
+text-align: justify;
+}
+
+@media (max-width: 810px) {
+  #posts .posts_content .posts_cards {
+    flex-direction: column;
+  }
+}
+
+
+
+
+
